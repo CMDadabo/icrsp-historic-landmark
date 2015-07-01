@@ -1,0 +1,296 @@
+/* resets */
+
+* {
+	border: 0;
+	-webkit-background-clip: padding-box;
+	font-family: inherit;
+	font-weight: inherit;
+	list-style: none;
+	margin: 0;
+	outline: none;
+	padding: 0;
+	vertical-align: baseline;
+}
+
+/* special effects */
+
+a, a img, input, select, textarea {
+	-moz-transition: all 0.2s ease-in;
+	-ms-transition: all 0.2s ease-in;
+	-o-transition: all 0.2s ease-in;
+	-webkit-transition: all 0.2s ease-in;
+	transition: all 0.2s ease-in;
+}
+
+a:hover, a:hover img, input:focus, select:focus, textarea:focus {
+	-moz-transition: all 0.1s ease-out;
+	-ms-transition: all 0.1s ease-out;
+	-o-transition: all 0.1s ease-out;
+	-webkit-transition: all 0.1s ease-out;
+	transition: all 0.1s ease-out;
+}
+
+body { color: #303030; background: #fcf4ec url(body-background.jpg) no-repeat top center; font-family: Cambria,Georgia,'Big Caslon',Baskerville,serif; margin: 0; }
+#container { margin: auto; width: 840px; }
+#navigation { font: normal 16px Garamond,Cambria,Times,serif; margin-top: 105px; text-align: center; }
+    #navigation a, #navigation a:visited { color: #2d5775; font-size: 18px; padding: 10px 11px; text-transform: uppercase; text-decoration: none; text-shadow: -1px -1px 3px #EDE7D3; }
+    #navigation a:hover { color: #897E74; }
+#content { min-height: 700px; margin: 0 10px 0 10px; overflow: auto; padding-bottom: 15px; }
+	#concerts #content { overflow: hidden; }
+    a, a:visited { color: #2d5775; text-decoration: underline; }
+    a:active, a:hover { color: #897e74; }
+    center { font-size: 25px; letter-spacing: 2px; }
+	embed,object { display: block; outline: 0; padding: 5px; margin: auto; }
+	h1 { color: #2d5775; font: italic 36px Garamond,Baskerville,Times,serif; margin-top: 30px; letter-spacing: 2px; margin-bottom: 10px; text-shadow: 4px 4px 10px #ede7d3; }
+    h2 { color: #796b5e; font: italic 24px Garamond,Baskerville,Times,serif; margin-top: 25px; letter-spacing: 1px; margin-bottom: 10px; }
+    p,td { font-size: 15px; line-height: 30px; text-align: justify; margin-bottom: 10px; }
+    td { margin-bottom: 0; padding: 3px; }
+    .left img, .right img { display: block; margin: 0 auto 4px; padding: 5px; }
+    .headline { border: 0; box-shadow: none; margin: 20px 0 15px 0; }
+    .right .donate { background-color: transparent; border: 0; box-shadow: none; margin: 30px auto; padding: 0; }
+        .right .donate:hover { opacity: 0.9; }
+    .next-link { display: block; font: 18px Georgia,Baskerville,Times,serif; margin-top: 20px; text-align: right; }
+	.center { margin-top: 25px; text-align: center; }
+		.center img { margin: auto; }
+    .left { color: #585858; font: italic 17px Garamond,Baskerville,Times,serif; float: left; margin: 20px 15px 20px 0; text-align: center; }
+    .right { color: #585858; font: italic 17px Garamond,Baskerville,Times,serif; float: right; margin: 20px 0 20px 15px; text-align: center; }
+#footer { background-color: #bcccd8; border-top: 3px solid white; box-shadow: -12px 0 24px silver; color: #505050; font-size: 14px; margin-top: 150px; padding: 20px; text-align: center; }
+    #footer a, #footer a:visited { color: #303030; }
+.clear { clear: both; }
+.phase-container { background-color: white; border: 7px solid white; display: block; font-family: Cambria,Baskerville,Garamond,serif; font-style: normal; text-align: left; width: 250px }
+	.phase { font-size: 15px; background-color: #d2dce3; color: #3d3d3d; height: auto; padding: 7px 5px 7px 5px; }
+	.phase-title { font: 17px Garamond,Georgia,serif; font-weight: bold; padding: 5px 0 5px 0; }
+	.phase-amount { font-family: Georgia,Cambria,Garamond,serif; font-size: 13px; padding-top: 5px }
+	.phase-current { background-color: #bcccd8; border-top: 2px solid white; border-bottom: 2px solid white; }
+	.phase-total { background-color: #2d5775; color: white; border-top: 2px solid white; font-size: 15px; padding: 7px 5px 7px 5px; text-align: center; }
+	.phase-total .number { font-family: Georgia,Cambria,Garamond,serif; font-weight: bold; }
+input,select,textarea { border: 1px solid #bcccd8; box-shadow: inset 0 0 6px #EFEFEF; box-shadow: inset 0 0 6px #EFEFEF; color: #303030; font: 20px Arial,Verdana,Helvetica; padding: 3px; width: 350px }
+input:focus,select:focus,textarea:focus { border-color: gold; }
+textarea { height: 150px; }
+.small { display: inline; color: silver; font-size: 12px; }
+.button, button { background-color: #bcccd8; border: 2px solid white; color: #303030; cursor: pointer; margin-top: 15px; font: bold 14px Verdana,Arial,Helvetica; padding: 8px; letter-spacing:1px; text-shadow:1px 1px 0 white; }
+b, strong { font-weight: bold; }
+
+audio, embed, img {
+	border: 1px solid #FBF5E6 /*#e8e8e8*/;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	-moz-box-shadow: -4px 4px 16px #ede7d3;
+	box-shadow: -4px 4px 16px #ede7d3;
+}
+
+a:active img, a:hover img {
+	border-color: white;
+}
+
+
+/**
+ * jQuery lightBox plugin
+ * This jQuery plugin was inspired and based on Lightbox 2 by Lokesh Dhakar (http://www.huddletogether.com/projects/lightbox2/)
+ * and adapted to me for use like a plugin from jQuery.
+ * @name jquery-lightbox-0.5.css
+ * @author Leandro Vieira Pinho - http://leandrovieira.com
+ * @version 0.5
+ * @date April 11, 2008
+ * @category jQuery plugin
+ * @copyright (c) 2008 Leandro Vieira Pinho (leandrovieira.com)
+ * @license CC Attribution-No Derivative Works 2.5 Brazil - http://creativecommons.org/licenses/by-nd/2.5/br/deed.en_US
+ * @example Visit http://leandrovieira.com/projects/jquery/lightbox/ for more informations about this jQuery plugin
+ */
+#jquery-overlay { background-color: silver !important; opacity: 0.5 !important; position: absolute; top: 0; left: 0; z-index: 90; width: 100%; height: 500px; }
+#jquery-lightbox { position: absolute; top: 0; left: 0; width: 100%; z-index: 100; text-align: center; line-height: 0; }
+#jquery-lightbox img, #jquery-lightbox a img { border: none; -moz-border-radius: none; box-shadow: none; }
+#lightbox-container-image-box { position: relative; background-color: white; width: 250px; height: 250px; margin: 0 auto; }
+#lightbox-container-image { padding: 10px; }
+#lightbox-loading { position: absolute; top: 40%; left: 0%; height: 25%; width: 100%; text-align: center; line-height: 0; }
+#lightbox-nav { position: absolute; top: 0; left: 0; height: 100%; width: 100%; z-index: 10; }
+#lightbox-container-image-box > #lightbox-nav { left: 0; }
+#lightbox-nav a { outline: none;}
+#lightbox-nav-btnPrev, #lightbox-nav-btnNext { width: 49%; height: 100%; zoom: 1; display: block; }
+#lightbox-nav-btnPrev { left: 0; float: left; }
+#lightbox-nav-btnNext { right: 0; float: right; }
+#lightbox-container-image-data-box { font-size: 12px; background-color: white; margin: 0 auto; line-height: 1.5em; overflow: auto; width: 100%; padding: 0 10px 0; }
+#lightbox-container-image-data { font-size: 14px; line-height: 1.5em; padding: 0 10px; }
+#lightbox-container-image-data #lightbox-image-details { width: 70%; float: left; text-align: left; }	
+#lightbox-image-details-caption { font-weight: bold; }
+#lightbox-image-details-currentNumber { display: block; clear: left; padding-bottom: 1.0em;	}			
+#lightbox-secNav-btnClose { width: 66px; float: right; padding-bottom: 0.7em; }
+
+
+/* virtual tour */
+
+h5 {
+	color: #2d5775;
+	font: italic 36px/60px Garamond,Baskerville,Times,serif;
+	letter-spacing: 1px;
+}
+
+h6 {
+	color: #796b5e;
+	font: italic 24px/48px Garamond,Baskerville,Times,serif;
+	letter-spacing: 1px;
+}
+
+.modal {
+	display: none;
+}
+
+.simplemodal-overlay {
+	background-color: silver;
+	opacity: 0.1;
+}
+
+.simplemodal-container {
+	background-color: white;
+	-moz-box-shadow: 0 5px 10px gray;
+	box-shadow: 0 5px 10px gray;
+	display: none;
+	height: 530px;
+	width: 920px;
+}
+
+.simplemodal-data {
+	overflow: auto;
+	padding: 20px;
+}
+
+.simplemodal-container a.modalCloseImg {
+	background: url(images/simplemodal-close.png) no-repeat;
+	cursor: pointer;
+	display: inline;
+	height: 29px;
+	position: absolute;
+	right: -18px;
+	top: -15px;
+	width: 25px;
+	z-index: 9;
+}
+
+#tour #content {
+	min-height: 0;
+}
+
+#tour #virtualTour {
+	background: transparent url(loading.gif) no-repeat center 100px;
+}
+
+#tour h1, #tour #content p {
+	text-align: center;
+}
+	
+#tour #tourImage {
+	border: 2px solid white;
+	-moz-box-shadow: 0 2px 8px gray;
+	box-shadow: 0 2px 8px gray;
+	display: block;
+	height: 800px;
+	margin: auto;
+	visibility: hidden;
+	width: 1078px;
+}
+
+#tour .sidebar {
+	float: right;
+	margin-left: 10px;
+}
+
+#tour .sidebar img {
+	-moz-box-shadow: 0 3px 5px silver;
+	box-shadow: 0 3px 5px silver;
+	display: block;
+	margin: 0 auto 10px auto;
+}
+
+#tour #map_highAltar:hover {
+	opacity: 0.5;
+}
+
+#tour .buttons {
+	line-height: 2.1em;
+	margin-top: 8px;
+	text-align: center;
+}
+
+#tour .buttons a, #tour #tooltip {
+	background-color: #2d5775;
+	-moz-box-shadow: 0 2px 2px #ede7d3;
+	box-shadow: 0 2px 2px #ede7d3;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	color: white;
+	display: inline-block;
+	font: 12px Garamond,Baskerville,serif;
+	letter-spacing: 1px;
+	margin: 2px;
+	padding: 6px;
+	text-decoration: none;
+	text-shadow: -1px -1px 0 #333333;
+	text-transform: uppercase;
+	-moz-transition: all 0.25s ease-out;
+	-ms-transition: all 0.25s ease-out;
+	-o-transition: all 0.25s ease-out;
+	-webkit-transition: all 0.25s ease-out;
+	transition: all 0.25s ease-out;
+}
+
+#tour .buttons a:active {
+	background-color: #bcccd8;
+	-moz-box-shadow: inset 0 2px 2px gray;
+	box-shadow: inset 0 2px 2px gray;
+	color: white;
+	text-shadow: -1px -1px 0 gray;
+	-moz-transition: none;
+	-ms-transition: none;
+	-o-transition: none;
+	-webkit-transition: none;
+	transition: none;
+}
+
+#tour .buttons a:hover {
+	background-color: #bcccd8;
+	-moz-box-shadow: 0 1px 4px #333333;
+	box-shadow: 0 1px 4px #333333;
+	color: white;
+	text-shadow: 1px 1px 0 gray;
+	-moz-transition: none;
+	-ms-transition: none;
+	-o-transition: none;
+	-webkit-transition: none;
+	transition: none;
+}
+
+#tour #tooltip {
+	-moz-box-shadow: 0 8px 2px #333333;
+	box-shadow: 0 2px 8px #333333;
+	opacity: 0.8;
+	position: absolute;
+	z-index: 3000;
+}
+
+#tour #tooltip h3, #tooltip div {
+	margin: 0;
+}
+
+#tour audio {
+	background-color: gray;
+	-moz-box-shadow: inset 0 2px 2px gray;
+	box-shadow: inset 0 2px 2px gray;
+	display: block;
+	margin: 20px auto;
+	opacity: 0.6;
+	width: 200px;
+	-moz-transition: all 0.25s ease-out;
+	-ms-transition: all 0.25s ease-out;
+	-o-transition: all 0.25s ease-out;
+	-webkit-transition: all 0.25s ease-out;
+	transition: all 0.25s ease-out;
+}
+
+#tour audio:hover {
+	opacity: 1;
+	-moz-transition: all 0.1s ease-out;
+	-ms-transition: all 0.1s ease-out;
+	-o-transition: all 0.1s ease-out;
+	-webkit-transition: all 0.1s ease-out;
+	transition: all 0.1s ease-out;
+}
