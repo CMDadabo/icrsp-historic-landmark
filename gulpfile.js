@@ -22,7 +22,7 @@ gulp.task( 'lint', function ()
 gulp.task('templates', function() {
     var YOUR_LOCALS = {};
 
-    return gulp.src( 'jade/*.jade' )
+    return gulp.src( [ 'jade/*.jade', 'jade/**/*.jade', '!jade/includes/**/*.jade' ] )
         .pipe(jade({
             locals: YOUR_LOCALS,
             pretty: true
@@ -59,7 +59,7 @@ gulp.task( 'watch', function ()
     livereload.listen();
     gulp.watch( 'js/*.js', [ 'lint', 'scripts' ] );
     gulp.watch( 'less/*.less', [ 'less' ] );
-    gulp.watch( 'jade/*.jade', [ 'templates' ] );
+    gulp.watch( [ 'jade/*.jade', 'jade/**/*.jade' ], [ 'templates' ] );
 } );
 
 // Set default task
