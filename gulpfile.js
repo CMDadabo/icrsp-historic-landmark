@@ -7,6 +7,7 @@ var concat = require( 'gulp-concat' );
 var uglify = require( 'gulp-uglify' );
 var rename = require( 'gulp-rename' );
 var autoprefixer = require( 'gulp-autoprefixer' );
+var jade = require( 'gulp-jade' );
 
 // Lint Task
 gulp.task( 'lint', function () 
@@ -16,6 +17,19 @@ gulp.task( 'lint', function ()
         .pipe( jshint.reporter( 'default' ) )
         .pipe( livereload() );
 } );
+
+// Compile Jade 
+gulp.task('templates', function() {
+    var YOUR_LOCALS = {};
+
+    return gulp.src( 'jade/*.jade' )
+        .pipe(jade({
+            locals: YOUR_LOCALS,
+            pretty: true
+        }))
+        .pipe(gulp.dest( 'html/' ) )
+        .pipe( livereload() );
+});
 
 // Compile LESS
 gulp.task( 'less', function () 
@@ -45,7 +59,8 @@ gulp.task( 'watch', function ()
     livereload.listen();
     gulp.watch( 'js/*.js', [ 'lint', 'scripts' ] );
     gulp.watch( 'less/*.less', [ 'less' ] );
+    gulp.watch( 'jade/*.jade', [ 'templates' ] );
 } );
 
 // Set default task
-gulp.task( 'default', [ 'lint', 'less', 'scripts', 'watch' ] );
+gulp.task( 'default', [ 'lint', 'templates', 'less', 'scripts', 'watch' ] );
