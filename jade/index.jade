@@ -1,0 +1,62 @@
+doctype html
+html
+  head
+    title Chicago Historic Landmark &sect; Help Save an Historic Landmark
+    include ./includes/head.jade
+  body
+    #container
+      #navigation
+        a.first(href='/') Home
+        a(href='glorious-history.html') History
+        a(href='critical-present.html') Present
+        a(href='bright-future.html') Future
+        a(href='donate.html') Donate
+        a(href='contact.html') Contact
+        a(href='offerings.php') Offerings
+        a.last(href='chicago-concert-series.html') Concerts
+      #content
+        .right
+          embed(
+            width='390',
+            height='300',
+            src='mediaplayer.swf',
+            allowscriptaccess='samedomain',
+            wmode='transparent',
+            allowfullscreen='true',
+            flashvars='file=documentary.flv&bufferlength=5&volume=100&controlbar=over&autostart=false&fullscreen=true&backcolor=ffffff&screencolor=ffffff')
+          a(href='donate.html')
+            img.donate(src='donate.png', alt='Please Donate', height='68', width='232')
+        img.headline(src='headline.png', alt='Chicago Historic Landmark', height='130', width='400')
+        p
+          | The unique structure of the <strong>historic landmark Shrine of Christ the King</strong>, historically 
+          | known as St. Clara and then St. Gelasius, <strong>near the influential University of Chicago</strong>, 
+          | will be brought back to classical beauty. We invite you to become part of a unique project and to contribute
+          | generously to the <strong>restoration of this historic landmark in Chicago</strong>. This gem of
+          | ecclesiastical art will again display Chicago&apos;s architectural heritage. Learn more about this
+          | historic landmark&apos;s <a href='glorious-history.html'>Past</a>,
+          | <a href='critical-present.html'>Present</a>, and <a href='bright-future.html'>Future</a> in these pages.
+        h2 Classical Music Concert Series
+        p
+          | In addition to the work of preserving our architectural heritage, the Shrine also offers a number of
+          | concerts of classical music. Learn more about our <a href='chicago-concert-series.html'>Classical Music
+          | Concerts</a>.
+        center
+          a(href='chicago-concert-series.html')
+            img(src='images/concert-header.jpg', alt='Free Chicago Concert Series', height='310', width='810')
+    #footer
+      a(href='http://www.historic-landmark.org/') Historic Landmark
+      |  &sect; 
+      a(href='http://www.historic-landmark.org/') Chicago Historic Landmark
+      |  &sect; 
+      a(href='historical-landmark.html') Historical Landmark
+      |  &sect; 
+      a(href='historical-landmark.html') Chicago Historical Landmark
+      br
+      br
+      |Shrine of Christ the King &middot; 6415 S. Woodlawn Avenue &middot; Chicago, Illinois 60637-3817
+      br
+      |Phone: 773.363.7409 &middot; Fax: 773.363.7824 &middot; Email: 
+      a(href='mailto:info@historic-landmark.org?subject=Historic Landmark Restoration Inquiry')
+        | info@historic-landmark.org
+      br
+      |Copyright &copy; MMXV. All rights reserved.
