@@ -5,15 +5,7 @@ html
     include ./includes/head.jade
   body
     #container
-      #navigation
-        a.first(href='/') Home
-        a(href='glorious-history.html') History
-        a(href='critical-present.html') Present
-        a(href='bright-future.html') Future
-        a(href='donate.html') Donate
-        a(href='contact.html') Contact
-        a(href='offerings.php') Offerings
-        a.last(href='chicago-concert-series.html') Concerts
+      include ./includes/navigation.jade
       #content
         .right
           embed(
