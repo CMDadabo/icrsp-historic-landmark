@@ -8,6 +8,7 @@ var uglify = require( 'gulp-uglify' );
 var rename = require( 'gulp-rename' );
 var autoprefixer = require( 'gulp-autoprefixer' );
 var jade = require( 'gulp-jade' );
+var deploy = require( 'gulp-gh-pages' );
 
 // Lint Task
 gulp.task( 'lint', function () 
@@ -53,6 +54,14 @@ gulp.task( 'scripts', function ()
         .pipe( livereload() );
 } );
 
+// Send to GitHub Pages
+gulp.task( 'gh-pages', function ()
+{
+    return gulp
+    .src( "html/**/*" )
+    .pipe( deploy() );
+})
+
 // Watch files for changes
 gulp.task( 'watch', function () 
 {
@@ -62,5 +71,10 @@ gulp.task( 'watch', function ()
     gulp.watch( [ 'jade/*.jade', 'jade/**/*.jade' ], [ 'templates' ] );
 } );
 
+gulp.task( 'build', [ 'lint', 'templates', 'less', 'scripts' ] );
+
+gulp.task( 'deploy', [ 'build', 'gh-pages' ] );
+
 // Set default task
-gulp.task( 'default', [ 'lint', 'templates', 'less', 'scripts', 'watch' ] );
+gulp.task( 'default', [ 'build' , 'watch' ] );
+
