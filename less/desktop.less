@@ -56,15 +56,15 @@
       margin: 0 0 0.4em 0;
     }
     .date {
-      margin: 0px;
-      text-align: left;
-      top: 13px;
-      width: 100%;
-      position: absolute;
-      left: 120%;
+      font-variant: small-caps;
+      white-space: nowrap;
+      display: inline-block;
+      float: right;
+      margin-bottom: 0;
+      line-height: 32px;
     }
     .date::before {
-      content: '';
+      content: "";
       margin: 0;
     }
     .timeline-slides {
@@ -76,6 +76,9 @@
         height: auto;
       }
     }
+  }
+  .timeline-block:not(:last-of-type) .timeline-content {
+    margin-bottom: -250px;
   }
   .timeline-dot {
     top: 8px;
@@ -99,11 +102,6 @@
     }
     .timeline-content {
       float:right;
-    }
-    .date {
-      left: auto;
-      right: 120%;
-      text-align: right;
     }
   }
 }
