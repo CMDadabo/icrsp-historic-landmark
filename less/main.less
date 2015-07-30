@@ -57,13 +57,13 @@ input:focus, select:focus, textarea:focus {
 }
 body {
   color:#303030;
-  background:#fcf4ec url(../body-background.jpg) no-repeat top center;
+  background:#fcf4ec url(../body-background.jpg) no-repeat 50% -100px;
   font-family:Cambria, Georgia, 'Big Caslon', Baskerville, serif;
   margin:0;
 }
 #container {
   margin:auto;
-  width:840px;
+  max-width:840px;
 }
 ul#navigation {
   font:normal 16px Garamond, Cambria, Times, serif;
@@ -73,7 +73,6 @@ ul#navigation {
   a, a:visited {
     color:@dark-blue;
     font-size:18px;
-    padding:10px 11px;
     text-transform:uppercase;
     text-decoration:none;
     text-shadow:-1px -1px 3px #ede7d3;
@@ -81,12 +80,17 @@ ul#navigation {
   a:hover {
     color:#897e74;
   }
+  li {
+    margin-bottom: 1px;
+    width: 100%;
+  }
 }
 #content {
   min-height:700px;
   margin:0 10px 0 10px;
   overflow:auto;
   padding-bottom:15px;
+  clear: both;
 }
 #concerts #content {
   overflow:hidden;
@@ -525,6 +529,7 @@ h6 {
   margin:0;
 }
 
+// Timeline styles
 #timeline {
   overflow: hidden;
 }
@@ -566,21 +571,23 @@ h6 {
 }
 .timeline-content {
   position: relative;
-  width: 90%;
   margin-left: 3em;
+  margin-bottom: 1em;
   background-color: rgba( 255, 255, 255, 0.75);
+  border-bottom: 1px solid @timeline-color;
   padding: 12px;
   h2 {
-    margin: 0 0 0.4em 0;
+    margin: 0 0.4em 0.4em 0;
     display: inline-block;
   }
   .date {
-    display: inline-block;
     font-variant: small-caps;
+    white-space: nowrap;
+    margin-bottom: 0.8em;
+    display: inline-block;
   }
-  .date::before {
-    content: "–";
-    margin: 0 5px;
+  p {
+    line-height: 22px;
   }
   .timeline-slides {
     display: block;
