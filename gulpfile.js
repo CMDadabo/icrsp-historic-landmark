@@ -35,7 +35,8 @@ gulp.task('templates', function() {
 // Compile LESS
 gulp.task( 'less', function () 
 {
-    return gulp.src( 'less/*.less' )
+    return gulp.src( [ 'less/main.less', 'less/desktop.less' ] )
+        .pipe( concat( 'all.less' ) )
         .pipe( less() )
         .pipe( autoprefixer ( { browsers: [ '> 5%' ], cascade: false } ) )
         .pipe( gulp.dest( 'html/css' ) )
