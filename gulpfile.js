@@ -59,7 +59,7 @@ gulp.task( 'scripts', function ()
 gulp.task( 'gh-pages', function ()
 {
     return gulp
-    .src( "html/**/*" )
+    .src( [ "html/**/*", "html/css/**/*" ] )
     .pipe( deploy() );
 })
 
