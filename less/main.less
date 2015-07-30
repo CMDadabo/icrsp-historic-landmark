@@ -86,10 +86,11 @@ body {
   margin:auto;
   width:840px;
 }
-#navigation {
+ul#navigation {
   font:normal 16px Garamond, Cambria, Times, serif;
-  margin-top:105px;
-  text-align:center;
+  position: static;
+  display: none;
+  width: 100%;
   a, a:visited {
     color:@dark-blue;
     font-size:18px;
@@ -605,6 +606,28 @@ h6 {
 }
 
 @media only screen and (min-width: 900px) {
+
+  ul#navigation {
+    font:normal 16px Garamond, Cambria, Times, serif;
+    position: static;
+    display: none;
+    width: 100%;
+    a, a:visited {
+      color:@dark-blue;
+      font-size:18px;
+      text-transform:uppercase;
+      text-decoration:none;
+      text-shadow:-1px -1px 3px #ede7d3;
+    }
+    a:hover {
+      color:#897e74;
+    }
+    li {
+      margin-bottom: 1px;
+      width: 100%;
+    }
+  }
+  
   #timeline {
     overflow: hidden;
   }
