@@ -13,29 +13,8 @@
 
 // Colors
 @dark-blue: #2d5775;
-@timeline-color: desaturate(darken(#fcf4ec, 15%), 40%);
-
-// Timeline styles
-#timeline {
-  position: relative;
-  padding: 2em 0;
-  margin-top: 2em;
-  margin-bottom: 2em;
-}
-#timeline::before {
-  /* this is the vertical line */
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 18px;
-  height: 100%;
-  width: 4px;
-  background: @timeline-color;
-}
-.timeline-block {
-  position: relative;
-  clear: both;
-}
+@timeline-color: desaturate(darken(@beige, 15%), 40%);
+@beige: #fcf4ec;
 
 a {
   transition:all 0.2s ease-in;
@@ -552,6 +531,29 @@ h6 {
 #timeline::before {
   margin-left: -2px;
 }
+
+#timeline {
+  position: relative;
+  padding: 2em 0;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+#timeline::before {
+  /* this is the vertical line */
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 18px;
+  height: 100%;
+  width: 4px;
+  background: @timeline-color;
+}
+.timeline-block {
+  position: relative;
+  clear: both;
+}
+
+
 .timeline-content::before{
   content: '';
   position: absolute;
