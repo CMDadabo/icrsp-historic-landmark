@@ -29,13 +29,13 @@
 <head>
 	<title>Historical Landmark Literature</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="restoration,historic landmark,chicago historic landmark,historical landmark,chicago historical landmark">
+        <meta name="keywords" content="restoration,historic landmark,chicago historic landmark,historical landmark,chicago historical landmark">
 	<meta name="description" content="Chicago historic landmark - Help restore the Shrine of Christ the King, an historical landmark in Chicago, IL." />
 	<meta name="verify-v1" content="DfYrVDPQi+MYVt6aZ4/FXEHMSSnWjguEdXZKX+gq4aU=" />
 	<meta name="author" content="SITE CREATED BY DONALD TAYLOR, III - taylorwebsites@gmail.com" />
 	<link rel="shortcut icon" href="favicon.ico" />
 	<link rel="stylesheet" type="text/css" href="main.css" />
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
 	<script src="jquery.lightbox-0.5.js"></script>
 	<script>
 		var _gaq = _gaq || [];
@@ -71,9 +71,9 @@
 						echo('<h1>Error</h1><p>Your request could not be sent due to an error. We are very sorry, and would be most grateful if you would please <a href="mailto:info@historic-landmark.org?subject=Historic-Landmark.org: Error in List Form">notify us</a> of this.</p>');
 					}
 			?>
-            
-            
-            
+                        
+                        
+                        
 		</div>
 	</div>
 	<div id="footer">
