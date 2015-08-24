@@ -2,90 +2,81 @@
 
 doctype html
 html(lang="en")
-  head 
-    include ./includes/head.jade
-  body
-    #container
-      include ./includes/navigation.jade
-      #content
-        h1 Be a Part of History! Donate to this Worthy Project
-        .right.phase-container
-          .phase
-            .phase-title Initial Phase
-            |                     Tower, roof, tuck pointing, window frames, foundations
-            br
-            .phase-amount $1,300,000 est.
-          .phase.phase-current
-            .phase-title Construction Phase (current)
-            |                     Internal construction, scaffolding, HVAC, electrical wiring, ceiling, floor
-            br
-            .phase-amount $2,950,000 est.
-          .phase
-            .phase-title Final Phase
-            |                     Painting, plaster repair, altars, artwork, statuary, pews
-            br
-            .phase-amount $2,500,000 est.
-          .phase-total
-            | Total Estimated Cost
-            .number $6,750,000
-        p
-          | Work on the interior will continue in stages as funds allow. 
-          b Therefore, your generous support is needed.
-        p
-          | Please consider a generous, 
-          b tax-deductible
-          |  donation to this most worthy project of rehabilitating a magnificent architectural edifice in Chicago. Donors will receive a receipt of payment for tax purposes. Thank you most graciously.
-        h2 Donate Securely Online
-        p
-          | You can donate 
-          b securely
-          |  online with a Visa or MasterCard. Make your donation for "Shrine of Christ the King" in Chicago, IL.
-        blockquote
-          a#donate-button(href='http://www.institute-christ-king.org/donate/apostolates/') Go to Secure Donation Form »
-        h2 Donate by Mail, Phone, or in Person
-        p
-          | Donations for the building fund are gratefully received at the Shrine's neighboring office building in person or by mail, or can be taken over the phone.
-        blockquote
-          table.contactTable(border='0', cellpadding='3', cellspacing='1')
-            tr
-              td(valign='top')
-                b Address:
-              td(valign='top')
-                | Shrine of Christ the King
-                br
-                |                             6415 S. Woodlawn Avenue
-                br
-                |                             Chicago, Illinois 60637-3817
-            tr
-              td(valign='top')
-                b Phone:
-              td(valign='top') (773) 363-7409
-            tr
-              td(valign='top')
-                b Fax:
-              td(valign='top') (773) 363-7409
-            tr
-              td(valign='top')
-                b Email: 
-              td(valign='top')
-                a(href='mailto:info@historic-landmark.org?subject=Historic-Landmark.org Inquiry') info@historic-landmark.org
-    #footer
-      a(href='http://www.historic-landmark.org/') Historic Landmark
-      |  § 
-      a(href='http://www.historic-landmark.org/') Chicago Historic Landmark
-      |  § 
-      a(href='historical-landmark.html') Historical Landmark
-      |  § 
-      a(href='historical-landmark.html') Chicago Historical Landmark
-      br
-      br
-      |         Shrine of Christ the King · 6415 S. Woodlawn Avenue · Chicago, Illinois 60637-3817
-      br
-      |         Phone: 773.363.7409 · Fax: 773.363.7824 · Email: 
-      a(href='mailto:info@historic-landmark.org?subject=Historic Landmark Restoration Inquiry') info@historic-landmark.org
-      br
-      |         Copyright © MMXI. All rights reserved.
-    script(src='http://www.google-analytics.com/urchin.js', type='text/javascript')
-    script(type='text/javascript').
-      _uacct = "UA-131347-8";
-      urchinTracker();
+    head 
+        include ./includes/head.jade
+    body
+        #container
+            include ./includes/navigation.jade
+            #content
+                h1 Be a Part of History! Donate to this Worthy Project
+                .right.phase-container
+                    .phase-complete
+                        .phase-title Phase 1
+                        | Main Roof, Tuckpointing
+                        br
+                        .phase-amount $1,300,000 raised
+                    .phase-complete
+                        .phase-title Phase 2
+                        | Insulation, Accessible Restroom, Staircase, Flat 
+                        br
+                        .phase-amount $350,000 raised
+                    .phase.phase-current
+                        .phase-title Phase 3 (In Progress)
+                        | Mechanical Systems: HVAC, Plumbing, Electrical, Nave floor slab replacement
+                        br
+                        .phase-amount ??? of $2,500,000
+                            .fill 
+                    .phase
+                        .phase-title Phase 4
+                        | Ceiling, flooring, Walls, Steps
+                        br
+                        .phase-amount $2,500,000 est.
+                    .phase
+                        .phase-title Phase 5
+                        | Painting, plaster repair, altars, artwork, statuary, pews
+                        br
+                        .phase-amount $2,000,000 est.
+                    .phase-total
+                        | Total Estimated Cost
+                        .number $8,650,000
+                p
+                    | Work on the interior will continue in stages as funds allow. <strong>Therefore, your generous
+                    | support is needed.</strong>
+                p
+                    | Please consider a generous, <strong>tax-deductible</strong> donation to this most worthy project
+                    | of rehabilitating a magnificent architectural edifice in Chicago. Donors will receive a receipt of
+                    | payment for tax purposes. Thank you most graciously.
+                h2 Donate Securely Online
+                p
+                    | You can donate <strong>securely</strong> online with a Visa or MasterCard. Make your donation for
+                    | "Shrine of Christ the King" in Chicago, IL.
+                blockquote
+                    a#donate-button(href='http://www.institute-christ-king.org/donate/apostolates/') Go to Secure Donation Form »
+                h2 Donate by Mail, Phone, or in Person
+                p
+                    | Donations for the building fund are gratefully received at the Shrine's neighboring office building in person or by mail, or can be taken over the phone.
+                blockquote
+                    table.contactTable(border='0', cellpadding='3', cellspacing='1')
+                        tr
+                            td(valign='top')
+                                strong Address:
+                            td(valign='top')
+                                | Shrine of Christ the King
+                                br
+                                | 6415 S. Woodlawn Avenue
+                                br
+                                | Chicago, Illinois 60637-3817
+                        tr
+                            td(valign='top')
+                                strong Phone:
+                            td(valign='top') (773) 363-7409
+                        tr
+                            td(valign='top')
+                                strong Fax:
+                            td(valign='top') (773) 363-7409
+                        tr
+                            td(valign='top')
+                                strong Email: 
+                            td(valign='top')
+                                a(href='mailto:shrine@institute-christ-king.org?subject=Historic-Landmark.org Inquiry') shrine@institute-christ-king.org
+    include ./includes/footer.jade
