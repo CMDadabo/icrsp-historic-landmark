@@ -8,11 +8,12 @@ html(lang="en")
         #container
             include ./includes/navigation.jade
             #content
-                img.headline(src='headline.png', alt='Chicago Historic Landmark', height='130', width='400')
+                .splash
+                    .fade
+                        img(src="headline.png", alt="Join This Effort to Restore the Magnificence of an Historic Landmark, a Gem of History")
+                        a(href='donate') Donate Now
                 .right
-                    video(style="background-color:black;" src='documentary.mp4' width="390" height="300" onclick="this.paused?this.play():this.pause();" controls)
-                    a(href='donate.html')
-                        img.donate(src='donate.png', alt='Please Donate', height='68', width='232')
+                    //- video(style="background-color:black;" src='documentary.mp4' width="390" height="300" onclick="this.paused?this.play():this.pause();" controls)
                 p
                     | The unique structure of the <strong>historic landmark Shrine of Christ the King</strong>, historically 
                     | known as St. Clara and then St. Gelasius, <strong>near the influential University of Chicago</strong>, 
@@ -28,5 +29,5 @@ html(lang="en")
                     | Concerts</a>.
                 center
                     a(href='chicago-concert-series.html')
-                        img(src='images/concert-header.jpg', alt='Free Chicago Concert Series', height='310', width='810')
+                        img(src='images/concert-header.png', alt='Free Chicago Concert Series', height='310', width='810')
         include ./includes/footer.jade
