@@ -11,7 +11,7 @@ var jade = require( 'gulp-jade' );
 var deploy = require( 'gulp-gh-pages' );
 
 // Lint Task
-gulp.task( 'lint', function () 
+gulp.task( 'lint', function ()
 {
         return gulp.src( 'js/*.js' )
                 .pipe( jshint() )
@@ -19,7 +19,7 @@ gulp.task( 'lint', function ()
                 .pipe( livereload() );
 } );
 
-// Compile Jade 
+// Compile Jade
 gulp.task('templates', function() {
         var YOUR_LOCALS = {};
 
@@ -33,7 +33,7 @@ gulp.task('templates', function() {
 });
 
 // Compile LESS
-gulp.task( 'less', function () 
+gulp.task( 'less', function ()
 {
         return gulp.src( [ 'less/main.less', 'less/desktop.less' ] )
                 .pipe( concat( 'all.less' ) )
@@ -44,14 +44,14 @@ gulp.task( 'less', function ()
 } );
 
 // Concat and minify JS
-gulp.task( 'scripts', function () 
+gulp.task( 'scripts', function ()
 {
         return gulp.src( 'js/*.js' )
                 .pipe( concat( 'all.js' ) )
-                .pipe( gulp.dest( 'dist' ) )
+                .pipe( gulp.dest( 'html/js' ) )
                 .pipe( rename( 'all.min.js' ) )
                 .pipe( uglify() )
-                .pipe( gulp.dest( 'dist' ) )
+                .pipe( gulp.dest( 'html/js' ) )
                 .pipe( livereload() );
 } );
 
@@ -61,10 +61,10 @@ gulp.task( 'gh-pages', function ()
         return gulp
         .src( [ "html/**/*", "html/css/**/*" ] )
         .pipe( deploy() );
-})
+} );
 
 // Watch files for changes
-gulp.task( 'watch', function () 
+gulp.task( 'watch', function ()
 {
         livereload.listen();
         gulp.watch( 'js/*.js', [ 'lint', 'scripts' ] );
@@ -78,4 +78,3 @@ gulp.task( 'deploy', [ 'build', 'gh-pages' ] );
 
 // Set default task
 gulp.task( 'default', [ 'build' , 'watch' ] );
-
