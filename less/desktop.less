@@ -4,15 +4,24 @@
         background:#fcf4ec url(../body-background.jpg) no-repeat top center;
     }
 
+    p {
+        font-size: 15px;
+        line-height: 30px;
+    }
+
     ul#navigation {
+
         margin-top: 105px;
         font: normal 16px Garamond, Cambria, Times, serif;
-        position: block;
         display: block;
         width: 100%;
+        background-color: transparent;
+        max-height: none;
         text-align: center;
+        box-shadow: none;
+
         a, a:visited {
-            color:@dark-blue;
+            color: @dark-blue;
             font-size:18px;
             text-transform:uppercase;
             text-decoration:none;
@@ -21,12 +30,25 @@
             border-bottom: 2px solid rgba(45, 87, 117, 0);
             transition: border-color .5s;
         }
+
         a:hover {
             border-bottom: 2px solid rgba(45, 87, 117, 1);
         }
+
         li {
             display: inline;
         }
+
+    }
+
+    #nav-collapse {
+        display: none;
+    }
+
+    .splash .fade a {
+        position: absolute;
+        right: 165px;
+        top: 250px;
     }
 
     #timeline {
