@@ -1,14 +1,15 @@
 var gulp = require( 'gulp' );
 
+var autoprefixer = require( 'gulp-autoprefixer' );
+var concat = require( 'gulp-concat' );
+var deploy = require( 'gulp-gh-pages' );
+var inlinesource = require( 'gulp-inline-source' );
+var jade = require( 'gulp-jade' );
 var jshint = require( 'gulp-jshint' );
 var less = require( 'gulp-less' );
 var livereload = require( 'gulp-livereload' );
-var concat = require( 'gulp-concat' );
-var uglify = require( 'gulp-uglify' );
 var rename = require( 'gulp-rename' );
-var autoprefixer = require( 'gulp-autoprefixer' );
-var jade = require( 'gulp-jade' );
-var deploy = require( 'gulp-gh-pages' );
+var uglify = require( 'gulp-uglify' );
 
 // Lint Task
 gulp.task( 'lint', function ()
@@ -28,9 +29,17 @@ gulp.task('templates', function() {
                         locals: YOUR_LOCALS,
                         pretty: true
                 }))
-                .pipe(gulp.dest( 'html/' ) )
+                .pipe( gulp.dest( 'html/' ) )
                 .pipe( livereload() );
 });
+
+// Inline scripts and styles
+gulp.task( 'inlinesource', function ()
+{
+    return gulp.src( 'html/*.html' )
+            .pipe( inlinesource() )
+            .pipe(gulp.dest( 'html/' ) );
+} );
 
 // Compile LESS
 gulp.task( 'less', function ()
@@ -72,7 +81,7 @@ gulp.task( 'watch', function ()
         gulp.watch( [ 'jade/*.jade', 'jade/**/*.jade' ], [ 'templates' ] );
 } );
 
-gulp.task( 'build', [ 'lint', 'templates', 'less', 'scripts' ] );
+gulp.task( 'build', [ 'lint', 'templates', 'less', 'scripts', 'inlinesource' ] );
 
 gulp.task( 'deploy', [ 'build', 'gh-pages' ] );
 
