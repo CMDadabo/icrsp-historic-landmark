@@ -60,7 +60,7 @@ textarea:focus {
 }
 body {
   color: #303030;
-  background: #fcf4ec url("../body-background.jpg") no-repeat 50% -100px;
+  background: #fcf4ec url("body-background.jpg") no-repeat 50% -100px;
   font-family: Cambria, Georgia, 'Big Caslon', Baskerville, serif;
   margin: 0;
 }
@@ -212,7 +212,7 @@ td {
   padding: 5px;
 }
 .splash {
-  background-image: url("../images/splash.jpg");
+  background-image: url("images/splash.jpg");
   background-position: -100px;
   height: 400px;
   position: relative;
@@ -558,7 +558,7 @@ h6 {
   width: 920px;
 }
 .simplemodal-container a.modalCloseImg {
-  background: url("../images/simplemodal-close.png") no-repeat;
+  background: url("images/simplemodal-close.png") no-repeat;
   cursor: pointer;
   display: inline;
   height: 29px;
@@ -580,7 +580,7 @@ h6 {
   min-height: 0;
 }
 #tour #virtualTour {
-  background: transparent url("../loading.gif") no-repeat center 100px;
+  background: transparent url("loading.gif") no-repeat center 100px;
 }
 #tour #tourImage {
   border: 2px solid white;
@@ -762,7 +762,7 @@ h6 {
 }
 @media only screen and (min-width: 900px) {
   body {
-    background: #fcf4ec url("../body-background.jpg") no-repeat top center;
+    background: #fcf4ec url("body-background.jpg") no-repeat top center;
   }
   #content {
     margin: 0 15px 0 15px;
