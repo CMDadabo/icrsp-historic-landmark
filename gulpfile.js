@@ -86,7 +86,7 @@ gulp.task( "watch", function ()
 {
         livereload.listen();
         gulp.watch( "js/*.js", [ "lint", "scripts" ] );
-        gulp.watch( "less/*.less", [ "less" ] );
+        gulp.watch( "less/*.less", [ "less", "inlinesource" ] );
         gulp.watch( [ "jade/*.jade", "jade/**/*.jade" ], [ "templates" ] );
 } );
 
