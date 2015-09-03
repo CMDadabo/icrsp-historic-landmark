@@ -4,6 +4,10 @@
         background:#fcf4ec url( "../body-background.jpg" ) no-repeat top center;
     }
 
+    #content {
+        margin:0 15px 0 15px;
+    }
+
     p {
         font-size: 15px;
         line-height: 30px;
@@ -45,10 +49,20 @@
         display: none;
     }
 
-    .splash .fade a {
-        position: absolute;
-        right: 165px;
-        top: 250px;
+    .splash {
+
+        margin: 20px 0;
+
+        .fade {
+
+            a {
+                position: absolute;
+                right: 165px;
+                top: 250px;
+            }
+
+        }
+
     }
 
     #timeline {
@@ -127,4 +141,36 @@
             float:right;
         }
     }
+
+    #footer {
+
+        ul {
+
+            border-bottom: 0px;
+            text-align: center;
+
+            li {
+                display: inline;
+                padding: 0;
+            }
+            li:first-child:before {
+                content: '\a';
+                white-space: pre;
+            }
+            li:after {
+                content: '\b7';
+                padding: 0 5px;
+            }
+            li:last-child:after {
+                content: none;
+            }
+
+        }
+
+        div {
+            margin-top: 20px;
+        }
+
+    }
+
 }
