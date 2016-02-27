@@ -86,11 +86,11 @@ gulp.task( "watch", function ()
 {
         livereload.listen();
         gulp.watch( "js/*.js", [ "lint", "scripts" ] );
-        gulp.watch( "less/*.less", [ "less", "inlinesource" ] );
+        gulp.watch( "less/*.less", [ "less" ] );
         gulp.watch( [ "jade/*.jade", "jade/**/*.jade" ], [ "templates" ] );
 } );
 
-gulp.task( "build", [ "lint", "templates", "less", "scripts", "inlinesource" ] );
+gulp.task( "build", [ "lint", "templates", "less", "scripts" ] );
 
 gulp.task( "deploy", [ "build", "gh-pages" ] );
 
