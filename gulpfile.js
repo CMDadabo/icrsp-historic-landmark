@@ -20,6 +20,12 @@ gulp.task( "clean:html", function()
         ]);
 } );
 
+// Copy images
+gulp.task( "copy", function()
+{
+    return gulp.src( "images/**/*" ).pipe( gulp.dest( "html/images" ) );
+} );
+
 // Lint Task
 gulp.task( "lint", function ()
 {
@@ -90,9 +96,9 @@ gulp.task( "watch", function ()
         gulp.watch( [ "jade/*.jade", "jade/**/*.jade" ], [ "templates" ] );
 } );
 
-gulp.task( "build", [ "lint", "templates", "less", "scripts" ] );
+gulp.task( "build", [ "lint", "templates", "less", "scripts", "copy" ] );
 
-gulp.task( "deploy", [ "build", "gh-pages" ] );
+gulp.task( "deploy", [ "build", "copy", "gh-pages" ] );
 
 // Set default task
 gulp.task( "default", [ "build" , "watch" ] );
