@@ -8,61 +8,41 @@ html(lang="en")
         #container
             include ./includes/navigation.jade
             #content
-                .center
-                    img(src='images/concert-header.jpg', alt='Free Chicago Concert Series', height='310', width='810')
-                //- .right(style='width: 250px')
-                //-     h2 Upcoming Concerts
-                //-     i Sunday, April 19th @ 2pm
-                //-     br
-                //-     br
-                //-     i Sunday, May 17th @ 2pm 
-                //-     br
-                //-     br
-                //-     i Sunday, June 14th @ 2pm
-                //-     br
-                //-     br
-                    // <a href="concert-flyer.pdf">Flyer (PDF)</a>
+                img.concert-header(src='images/concert-header.jpg', alt='Free Chicago Concert Series', height='310', width='810')
+                .right(style='width: 250px')
+                    h2 Spring 2016 Concerts
+                    i Sunday, April 10th @ 2pm
+                    br
+                    br
+                    i Sunday, May 15th @ 2pm 
+                    br
+                    br
+                    i Sunday, June 12th @ 2pm
+                    br
+                    br
+                    span(style="font-style:normal;font-variant:small-caps")
+                        | 6400 S Kimbark Ave
+                        br
+                        | Chicago, IL 60546
+                        br
+                    a(href='https://www.google.com/maps/dir//6400+S+Kimbark+Ave,+Chicago,+IL+60637/@41.7781738,-87.595838,18.64z/data=!4m13!1m4!3m3!1s0x880e291e8d45dff1:0x16988d0be791b0fe!2s6400+S+Kimbark+Ave,+Chicago,+IL+60637!3b1!4m7!1m0!1m5!1m1!1s0x880e291e8d45dff1:0x16988d0be791b0fe!2m2!1d-87.5950636!2d41.7783854', target='_blank') View Map
+
                 h1 Experience the Beauty of Culture
                 p
-                    | The Shrine of Christ the King, a landmark church which had an empty, gutted interior two years ago, is already today a cultural center where art, music, and architecture offer a glimpse of divine beauty. Located just minutes from Chicago's Lakefront and the Museum of Science and Industry, this extraordinary edifice is now a venue for a remarkable program of classical concerts and lectures on history and the arts. Inspiring the mind and uplifting the heart, these enriching experiences of cultural beauty are attracting a growing number of people from the local Chicago community and beyond. You too are invited to join us for the special events listed at right!  
-                    b
-                        a(href='http://maps.google.com/maps?oe=utf-8&client=firefox-a&ie=UTF8&cid=0,0,15286766557320060506&fb=1&hq=institute+christ+king&hnear=Chicago,+IL&gl=us&daddr=6415+S+Woodlawn+Ave,+Chicago,+IL+60637&geocode=10478240714008003387,41.778180,-87.596035&ei=Nw5rS8_1C5WMNtvPhN8E&ved=0CAoQngIwAA&z=16', target='_blank') Google Map to the Shrine »
+                    | The Shrine of Christ the King, a landmark church which had an empty, gutted interior two years 
+                    | ago, is already today a cultural center where art, music, and architecture offer a glimpse of 
+                    | divine beauty. Located just minutes from Chicago's Lakefront and the Museum of Science and 
+                    | Industry, this extraordinary edifice is now a venue for a remarkable program of classical 
+                    | concerts and lectures on history and the arts. Inspiring the mind and uplifting the heart, these 
+                    | enriching experiences of cultural beauty are attracting a growing number of people from the local 
+                    | Chicago community and beyond. You too are invited to join us for the special events listed here! 
                 h1 "Hidden Treasures" Concert Series
                 p
                     | The Shrine offers a program of baroque chamber concerts featuring the lesser known masterpieces of great composers. In these one-hour concerts without intermission, you can discover a hidden treasure — delightful music which is rarely performed elsewhere! Hear a sampling from the videos below. Presented by the 
                     a(href='http://www.amadeusconsort.com', target='_blank') Amadeus Consort
                     | .
                 br
-                object(width='640', height='385')
-                    param(name='movie', value='http://www.youtube-nocookie.com/v/GjqedWDkneU&hl=en_US&fs=1&rel=0')
-                    param(name='allowFullScreen', value='true')
-                    param(name='allowscriptaccess', value='always')
-                    embed(src='http://www.youtube-nocookie.com/v/GjqedWDkneU&hl=en_US&fs=1&rel=0', type='application/x-shockwave-flash', allowscriptaccess='always', allowfullscreen='true', width='640', height='385')
-                br
-                object(width='640', height='385')
-                    param(name='movie', value='http://www.youtube-nocookie.com/v/-T_r-gcQlKM&hl=en_US&fs=1&rel=0')
-                    param(name='allowFullScreen', value='true')
-                    param(name='allowscriptaccess', value='always')
-                    embed(src='http://www.youtube-nocookie.com/v/-T_r-gcQlKM&hl=en_US&fs=1&rel=0', type='application/x-shockwave-flash', allowscriptaccess='always', allowfullscreen='true', width='640', height='385')
-                br
-                object(width='640', height='385')
-                    param(name='movie', value='http://www.youtube-nocookie.com/v/45vcMwSibkA&hl=en_US&fs=1&rel=0')
-                    param(name='allowFullScreen', value='true')
-                    param(name='allowscriptaccess', value='always')
-                    embed(src='http://www.youtube-nocookie.com/v/45vcMwSibkA&hl=en_US&fs=1&rel=0', type='application/x-shockwave-flash', allowscriptaccess='always', allowfullscreen='true', width='640', height='385')
-        #footer
-            a(href='http://www.historic-landmark.org/') Historic Landmark
-            |    § 
-            a(href='http://www.historic-landmark.org/') Chicago Historic Landmark
-            |    § 
-            a(href='historical-landmark.html') Historical Landmark
-            |    § 
-            a(href='historical-landmark.html') Chicago Historical Landmark
-            br
-            br
-            |                         Shrine of Christ the King · 6415 S. Woodlawn Avenue · Chicago, Illinois 60637-3817
-            br
-            |                         Phone: 773.363.7409 · Fax: 773.363.7824 · Email: 
-            a(href='mailto:shrine@historic-landmark.org?subject=Historic Landmark Restoration Inquiry') shrine@historic-landmark.org
-            br
-            |                         Copyright © MMXI. All rights reserved.
+                <iframe class="video-embed" width="560" height="315" src="https://www.youtube.com/embed/GjqedWDkneU" frameborder="0" allowfullscreen></iframe>
+                <iframe class="video-embed" width="560" height="315" src="https://www.youtube.com/embed/-T_r-gcQlKM" frameborder="0" allowfullscreen></iframe>
+                <iframe class="video-embed" width="560" height="315" src="https://www.youtube.com/embed/45vcMwSibkA" frameborder="0" allowfullscreen></iframe>
+        include ./includes/footer.jade

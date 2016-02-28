@@ -17,7 +17,7 @@ html(lang="en")
                     table.contactTable(border='0', cellpadding='3', cellspacing='1')
                         tr
                             td(valign='top')
-                                b Address:
+                                strong Address:
                             td(valign='top')
                                 | Shrine of Christ the King
                                 br
@@ -26,15 +26,15 @@ html(lang="en")
                                 |                                                         Chicago, Illinois 60637-3817
                         tr
                             td(valign='top')
-                                b Phone:
+                                strong Phone:
                             td(valign='top') (773) 363-7409
                         tr
                             td(valign='top')
-                                b Fax:
+                                strong Fax:
                             td(valign='top') (773) 363-7409
                         tr
                             td(valign='top')
-                                b Email: 
+                                strong Email: 
                             td(valign='top')
                                 a(href='mailto:shrine@historic-landmark.org?subject=Historic-Landmark.org Inquiry') shrine@historic-landmark.org
                 h2 Contact Form
@@ -52,7 +52,6 @@ html(lang="en")
                                 | Email:
                             td
                                 input(type='text', maxlength='50', name='email', size='35')
-                                .small (Your address won't ever be sold)
                         tr
                             td(valign='top')
                                 | Message:
@@ -104,23 +103,8 @@ html(lang="en")
                             td(valign='top')
                             td(valign='top')
                                 input.button(type='submit', name='send', value='Submit')
-        #footer
-            a(href='http://www.historic-landmark.org/') Historic Landmark
-            |    § 
-            a(href='http://www.historic-landmark.org/') Chicago Historic Landmark
-            |    § 
-            a(href='historical-landmark.html') Historical Landmark
-            |    § 
-            a(href='historical-landmark.html') Chicago Historical Landmark
-            br
-            br
-            |                 Shrine of Christ the King · 6415 S. Woodlawn Avenue · Chicago, Illinois 60637-3817
-            br
-            |                 Phone: 773.363.7409 · Fax: 773.363.7824 · Email: 
-            a(href='mailto:shrine@historic-landmark.org?subject=Historic Landmark Restoration Inquiry') shrine@historic-landmark.org
-            br
-            |                 Copyright © MMXI. All rights reserved.
-        script(src='http://www.google-analytics.com/urchin.js', type='text/javascript')
-        script(type='text/javascript').
+        include ./includes/footer.jade
+        script(src='http://www.google-analytics.com/urchin.js')
+        script().
             _uacct = "UA-131347-8";
             urchinTracker();
