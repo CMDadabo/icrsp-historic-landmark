@@ -11,6 +11,12 @@
     vertical-align:baseline;
 }
 
+// Animations
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
 // Colors
 @dark-blue: #2d5775;
 @timeline-color: desaturate(darken(@beige, 15%), 40%);
@@ -64,7 +70,7 @@ input:focus, select:focus, textarea:focus {
 }
 body {
     color:#303030;
-    background:#fcf4ec url( "../body-background.jpg" ) no-repeat 50% -100px;
+    background:#fcf4ec url( "body-background.jpg" ) no-repeat 50% -100px;
     font-family:Cambria, Georgia, 'Big Caslon', Baskerville, serif;
     margin:0;
 }
@@ -116,10 +122,6 @@ ul#navigation {
     box-sizing: border-box;
 	overflow: hidden;
     box-shadow: 0px 0px 10px rgba( 0, 0, 0, 0.5 ) inset;
-
-	/* Set our transitions up. */
-	-webkit-transition: max-height 0.8s;
-	-moz-transition: max-height 0.8s;
 	transition: max-height 0.8s;
     width: 100%;
 
@@ -152,6 +154,31 @@ ul#navigation.show {
     padding-bottom:15px;
     clear: both;
 }
+
+.home {
+    .phase-container {
+        text-align: center;
+
+        h1 {
+            padding: 0;
+            margin: 0;
+            font-size: 1em;
+            font-style: normal;
+            letter-spacing: normal;
+            font-variant: small-caps;
+        }
+
+        a {
+            font-size: .8em;
+        }
+
+        .phase-current {
+            border-bottom: 0;
+        }
+
+    }
+}
+
 #concerts #content {
     overflow:hidden;
 }
@@ -188,6 +215,7 @@ h1 {
     color:@dark-blue;
     font:italic 36px Garamond, Baskerville, Times, serif;
     margin-top:30px;
+    padding-left: 20px;
     letter-spacing:2px;
     margin-bottom:10px;
     text-shadow:4px 4px 10px #ede7d3;
@@ -206,6 +234,9 @@ p {
     text-align:justify;
     padding: 20px;
 }
+blockquote, form {
+    padding: 20px;
+}
 td {
     font-size:15px;
     line-height:30px;
@@ -219,13 +250,47 @@ td {
     margin:0 auto 4px;
     padding:5px;
 }
+.right {
+    margin: 0 auto;
+}
+.concert-header {
+    margin: 0;
+    border: 0;
+    animation: fadein 0.5s;
+}
 .splash {
+
+    animation: fadein 0.5s;
 
     background-image: url( "../images/splash.jpg" );
     background-position: -100px;
     height: 400px;
     position: relative;
     margin-top: -20px;
+
+    &.future {
+
+        background-image: url( "../tour/background.jpg" );
+        background-size: cover;
+        background-position: center;
+
+        div {
+
+            position: absolute;
+            top: 0;
+            width: 100%;
+            padding: 40px 20px;
+            background-color: rgba( 255, 255, 255, 0.7);
+
+            h1, h2 {
+                padding:0;
+                margin: 0;
+                width: 90%;
+            }
+
+        }
+
+    }
 
     .fade {
 
@@ -234,39 +299,59 @@ td {
         background: linear-gradient(to bottom left, rgba( 255, 255, 255, 0.9 ), rgba( 0, 0, 0, 0 ) );
         position: relative;
 
-        img {
-            padding-top: 100px;
-            right: 0px;
-            border: 0;
-            box-shadow: none;
-            display: block;
-            margin: 20px auto;
-        }
+        .fade-container {
+            position: absolute;
+            padding: 10px 15px 30px 15px;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            background-color: rgba( 255, 255, 255, 0.65 );
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
-        a {
-            font:22px Garamond, Baskerville, Times, serif;
-            margin: 0 auto;
-            display: block;
-            width: 200px;
-            text-align: center;
-            border: 4px solid #FFF;
-            box-shadow: 0px 0px 10px #AAA;
-            background-color: @dark-red;
-            text-transform: uppercase;
-            padding: 10px;
-            text-decoration: none;
-            color: #FFF;
+            .donate-container {
+
+                img {
+                    border: 0;
+                    box-shadow: none;
+                    padding: 20px 10px;
+                    display: block;
+                }
+
+                a {
+                    display: block;
+                    margin: 0 auto;
+                    font:22px Garamond, Baskerville, Times, serif;
+                    width: 200px;
+                    text-align: center;
+                    border: 4px solid #FFF;
+                    box-shadow: 0px 0px 10px #AAA;
+                    background-color: @dark-red;
+                    text-transform: uppercase;
+                    padding: 10px;
+                    text-decoration: none;
+                    color: #FFF;
+                }
+
+            }
+
         }
 
     }
 
 }
+.video-embed {
+    margin: 0px auto 50px;
+    display: block;
+    max-width: 90%;
+}
 .right {
+
     color:#585858;
     font:italic 17px Garamond, Baskerville, Times, serif;
-    float:right;
-    margin:20px 0 20px 15px;
     text-align:center;
+
     .donate {
         background-color:transparent;
         border:0;
@@ -274,27 +359,43 @@ td {
         margin:30px auto;
         padding:0;
     }
+
     .donate:hover {
         opacity:0.9;
     }
 }
+#donate-button {
+    display: block;
+    position: relative;
+    top: -20px;
+    margin-bottom: -30px;
+    width: 200px;
+    font: 18px Garamond, Baskerville, Times, serif;
+    text-align: center;
+    border: 4px solid #FFF;
+    box-shadow: 0px 0px 10px #AAA;
+    background-color: #8c0e21;
+    text-transform: uppercase;
+    padding: 10px;
+    text-decoration: none;
+    color: #FFF;
+}
 .next-link {
     display:block;
     font:18px Georgia, Baskerville, Times, serif;
-    margin-top:20px;
+    margin: 10px 20px 40px 20px;
     text-align:right;
 }
 .center {
     margin-top:25px;
     text-align:center;
-    img {
-        margin:auto;
-    }
+}
+.chicago-concert-series img {
+    margin: 25px 0;
 }
 .left {
     color:#585858;
     font:italic 17px Garamond, Baskerville, Times, serif;
-    float:left;
     margin:20px 15px 20px 0;
     text-align:center;
 }
@@ -337,21 +438,39 @@ td {
     clear:both;
 }
 .phase-container {
+    margin: 0 auto;
+    max-width: 70%;
+    width: 100%;
     background-color:white;
     border:7px solid white;
     display:block;
     font-family:Cambria, Baskerville, Garamond, serif;
     font-style:normal;
     text-align:left;
-    width:250px;
 }
 .phase {
+    text-align: center;
     font-size:15px;
     background-color:#d2dce3;
     color:#3d3d3d;
     height:auto;
-    padding:7px 5px 7px 5px;
+    padding: 7px 15px;
     border-top: 2px solid #FFF;
+
+    .phase-subtitle {
+        font-style: italic;
+    }
+
+    ul{
+        padding-top: 5px;
+        margin-left: 20px;
+
+        li {
+            text-align: left;
+            list-style: disc;
+            padding: 2px;
+        }
+    }
 
     &:first-child {
             border-top: 0;
@@ -581,7 +700,7 @@ h6 {
     height:530px;
     width:920px;
     a.modalCloseImg {
-        background:url( "../images/simplemodal-close.png" ) no-repeat;
+        background:url( "images/simplemodal-close.png" ) no-repeat;
         cursor:pointer;
         display:inline;
         height:29px;
@@ -604,7 +723,7 @@ h6 {
         min-height:0;
     }
     #virtualTour {
-        background:transparent url( "../loading.gif" ) no-repeat center 100px;
+        background:transparent url( "loading.gif" ) no-repeat center 100px;
     }
     #tourImage {
         border:2px solid white;

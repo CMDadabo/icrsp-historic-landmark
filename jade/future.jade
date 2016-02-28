@@ -8,82 +8,61 @@ html(lang="en")
         #container
             include ./includes/navigation.jade
             #content
-                h1 Bright Future
-                    .right.enlarge
-                        a(href='http://www.historic-landmark.org/images/img31-large.jpg', title='High Altar')
-                            img(src='http://www.historic-landmark.org/images/img31.jpg', alt='high altar', height='300', width='200')
-                        | The future glorious high altar
-                        br
-                        | (click to enlarge)
-                    p The future of this historic landmark will be glorious indeed.
-                    h2 The Restoration Plan
-                    .left
-                        img(src='http://www.historic-landmark.org/images/img30.jpg', alt='sketch of future sanctuary', height='300', 
-                            width='261')
-                        | Sketch of the restoration plan
-                        br
-                        br
-                        img(src='http://www.historic-landmark.org/images/img34.jpg', alt='the future', height='170', width='200')
-                        | Detail of the Shrine&apos;s
-                        br
-                        | existing exterior columns
-                    p
-                        | Using the existing reminders of the interior of the former St. Gelasius with its Corinthian capitals and 
-                        | high pilasters, the plan has been inspired by Renaissance and Baroque church buildings in Venice and 
-                        | Rome, making of the Shrine a light-flooded hall. Clear lines and solid materials will draw all attention 
-                        | to the sanctuary adorned with a magnificent high altar.
-                    p
-                        | The interior and exterior of the Shrine will show a perfect harmony of late Renaissance and early Baroque 
-                        | beauty.    This combination of styles will be at the same time elegant, sober, and awe-inspiring.    
-                        | This is the ideal form for an impressive yet reasonable restoration of the future Shrine.
-                    .right
-                        img(src='http://www.historic-landmark.org/images/img14.jpg', alt='Architect William C. Heyer', height='130',
-                        width='100')
-                        br
-                        | William C. Heyer
-                        br
-                        br
-                        img(src='http://www.historic-landmark.org/images/img16.jpg', alt='Designer Abbe Alexander Willweber', 
+                .splash.future
+                    div
+                        h1 Bright Future
+                        h2 The future of this historic landmark will be glorious indeed.
+                h2 The Restoration Plan
+                .left
+                    img(src='images/img34.jpg', alt='the future', height='170', width='200')
+                    | Detail of the Shrine&apos;s
+                    br
+                    | existing exterior columns
+                .right.enlarge
+                    a(href='images/img31-large.jpg', title='High Altar')
+                        img(src='images/img31.jpg', alt='high altar', height='300', width='200')
+                    | The future glorious high altar
+                    br
+                    | (click to enlarge)
+                p
+                    | Using the existing reminders of the interior of the former St. Gelasius with its Corinthian capitals and 
+                    | high pilasters, the plan has been inspired by Renaissance and Baroque church buildings in Venice and 
+                    | Rome, making of the Shrine a light-flooded hall. Clear lines and solid materials will draw all attention 
+                    | to the sanctuary adorned with a magnificent high altar.
+                p
+                    | The interior and exterior of the Shrine will show a perfect harmony of late Renaissance and early Baroque 
+                    | beauty.    This combination of styles will be at the same time elegant, sober, and awe-inspiring.    
+                    | This is the ideal form for an impressive yet reasonable restoration of the future Shrine.
+                h2 Experts Involved in the Project
+                .right
+                    div
+                        img(src='images/img16.jpg', alt='Designer Abbe Alexander Willweber', 
                             height='130', width='100')
                         | Designer
                         br
                         | Abbe Alexander
                         br
                         | Willweber
-                    h2 Experts Involved in the Project
-                    p
-                        | The vision for this restoration has been developed by a professional designer, Abbe Alexander Willweber, 
-                        | whose experience includes the beautiful <a href='historic-restoration.html'>St. Mary&apos;s Restoration 
-                        | in Wausau, Wisconsin</a>.    Implementing this vision will be craftsmen and artists from the United States 
-                        | and Europe who will collaborate to bring classical beauty back to this historic building.
-                    p 
-                        | The architect in charge of this project is especially suitable. William C. Heyer is a classical architect 
-                        | who has studied the work of St. Gelasius&apos; original architect, the masterful Henry J. Schlacks. 
-                        | Educated at Notre Dame, where Schlacks founded the architectural program, Mr. Heyer has the experience 
-                        | in church restoration and classical architecture necessary to bring this Shrine back to life.
-                    .left.enlarge
-                        a(href='http://www.historic-landmark.org/images/img32-large.jpg', title='High Altar Centerpiece')
-                            img(src='http://www.historic-landmark.org/images/img32.jpg', alt='altar centerpiece', height='300', 
-                                width='190')
-                        | Centerpiece of the high altar
-                        br
-                        | (click to enlarge)
-                    h2 Centerpiece of the High Altar
-                    p
-                        | The statue that will be placed above the high altar has already been chosen and acquired, thanks to the 
-                        | kindness of a very generous benefactor. Although part of its history is lost, it is certain that this 
-                        | wooden statue dates from the early seventeenth century and was carved by the famous school of early baroque 
-                        | sculptors of Seville in southern Spain. It would not be too far fetched to imagine that this statue might 
-                        | have been commissioned for one of the Carmelite monasteries of Andalusia, among whom devotion to the Child 
-                        | was popular&mdash;an echo back to the days that this Shrine was under the care of the Carmelites.    The 
-                        | crown and orb (held in the left hand) of the statue are missing and will now have to be supplied, as well 
-                        | as the attendant vestments.
-                    h2 Restoration of a Neighborhood
-                    p
-                        | The revival of the former St. Gelasius church will also be a great gift to the entire neighborhood and will 
-                        | contribute positively to the thriving Hyde Park and Woodlawn communities in south Chicago.    Indeed, this is 
-                        | already happening, as these once dilapidated neighborhoods are now bustling with new and restored homes and 
-                        | condominiums, which themselves have a classical air about them and will blend beautifully with the Shrine.
-                | &#x9;&#x9;
-                a.next-link(href='donate.html') Contribute to this Most Worthy Cause &raquo;
-        include ./includes/footer.jade
+                    div
+                        img(src='images/img14.jpg', alt='Architect William C. Heyer', height='130',
+                        width='100')
+                        | William C. Heyer
+                p
+                    | The vision for this restoration has been developed by a professional designer, Abbe Alexander Willweber, 
+                    | whose experience includes the beautiful <a href='historic-restoration.html'>St. Mary&apos;s Restoration 
+                    | in Wausau, Wisconsin</a>.    Implementing this vision will be craftsmen and artists from the United States 
+                    | and Europe who will collaborate to bring classical beauty back to this historic building.
+                p 
+                    | The architect in charge of this project is especially suitable. William C. Heyer is a classical architect 
+                    | who has studied the work of St. Gelasius&apos; original architect, the masterful Henry J. Schlacks. 
+                    | Educated at Notre Dame, where Schlacks founded the architectural program, Mr. Heyer has the experience 
+                    | in church restoration and classical architecture necessary to bring this Shrine back to life.
+                h2 Restoration of a Neighborhood
+                p
+                    | The revival of the former St. Gelasius church will also be a great gift to the entire neighborhood and will 
+                    | contribute positively to the thriving Hyde Park and Woodlawn communities in south Chicago.    Indeed, this is 
+                    | already happening, as these once dilapidated neighborhoods are now bustling with new and restored homes and 
+                    | condominiums, which themselves have a classical air about them and will blend beautifully with the Shrine.
+            | &#x9;&#x9;
+            a.next-link(href='donate.html') Contribute to this Most Worthy Cause &raquo;
+    include ./includes/footer.jade
