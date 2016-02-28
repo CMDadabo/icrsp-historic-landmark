@@ -10,3 +10,5 @@ window.onload = function () {
         navIcon.classList.toggle( "active" );
     } );
 };
+
+window.onload=function(){var e=document.getElementById("nav-collapse"),n=document.getElementById("navigation"),t=document.getElementById("nav-icon");e.addEventListener("click",function(){n.classList.toggle("show"),t.classList.toggle("active")})};
