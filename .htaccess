@@ -1,0 +1,54 @@
+# assorted options
+Options +FollowSymLinks
+Options -Indexes
+LimitRequestBody 10240000
+ServerSignature Off
+RewriteEngine On
+RewriteBase /
+
+# block access to certain files
+<FilesMatch "\.(htaccess|htpasswd|php3|php4|php5|phtml|cgi|pl|rb|py|sql|ini|phps|fla|psd|csv|log|sh|exe)$">
+    order allow,deny
+    deny from all
+</FilesMatch>
+
+# URL filtering helps to stop some hack attempts
+RewriteCond %{QUERY_STRING} http\: [OR]
+RewriteCond %{QUERY_STRING} \[ [OR]
+RewriteCond %{QUERY_STRING} \] [OR]
+RewriteCond %{QUERY_STRING} (\<|%3C).*script.*(\>|%3E) [NC,OR]
+RewriteCond %{QUERY_STRING} GLOBALS(=|\[|\%[0-9A-Z]{0,2}) [OR]
+RewriteCond %{QUERY_STRING} _REQUEST(=|\[|\%[0-9A-Z]{0,2}) [OR]
+RewriteCond %{QUERY_STRING} UNION [OR]
+RewriteCond %{QUERY_STRING} // [OR]
+RewriteCond %{QUERY_STRING} \*
+RewriteRule ^.*$ - [F,L]
+
+# forward index pages
+RewriteCond %{THE_REQUEST} ^.*\/index\.(html|php)?
+RewriteRule ^(.*)index\.(html|php)?$ http://%{HTTP_HOST}/$1 [L,R=301]
+
+# remove "www"
+RewriteCond %{HTTP_HOST} !=localhost
+RewriteCond %{HTTP_HOST} ^www\.
+RewriteRule ^(.*)$ http://historic-landmark.org/$1 [L,R=301]
+
+# remove "html"
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^\.]+)$ $1.html [NC,L,R=301]
+
+# remove trailing backslashes
+RewriteRule ^(.+)/$ http://%{HTTP_HOST}/$1 [L,R=301]
+
+# errors
+ErrorDocument 401 http://historic-landmark.org/page-not-found.html
+ErrorDocument 403 http://historic-landmark.org/page-not-found.html
+ErrorDocument 404 http://historic-landmark.org/page-not-found.html
+ErrorDocument 500 http://historic-landmark.org/page-not-found.html
+
+# legacy redirects
+Redirect 301 /offerings.php/ http://infantkingoffering.org
+Redirect 301 /offerings.php http://infantkingoffering.org
+Redirect 301 /offerings http://infantkingoffering.org
+Redirect 301 /offerings/ http://infantkingoffering.org
