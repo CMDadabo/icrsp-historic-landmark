@@ -505,8 +505,7 @@ td {
   display: block;
   background-color: #FFF;
   text-align: center;
-  line-height: 25px;
-  height: 25px;
+  padding: 7px;
   border: 1px solid #FFF;
 }
 .phase-total {
